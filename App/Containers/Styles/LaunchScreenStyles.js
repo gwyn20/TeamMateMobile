@@ -14,5 +14,19 @@ export default StyleSheet.create({
   },
   centered: {
     alignItems: 'center'
+  },
+  loginbutton: {
+    marginBottom: 30,
+    width: 260,
+    flex:1,
+    alignItems: 'center',
+    justifyContent:'center',
+    backgroundColor: '#404956'
+  },
+  g20logo: {
+    flex:1,
+    flexDirection:'row',
+    alignItems:'center',
+    justifyContent:'center'
   }
 })
