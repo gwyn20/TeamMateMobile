@@ -8,7 +8,12 @@ import { connect } from 'react-redux'
 import styles from './Styles/ProfileScreenStyle'
 
 class ProfileScreen extends Component {
+  
+
   render () {
+
+    const { navigate } = this.props.navigation;
+
     return (
       <ScrollView style={styles.container}>
         <KeyboardAvoidingView behavior='position'>
@@ -20,6 +25,14 @@ class ProfileScreen extends Component {
             <Text style={styles.sectionText}>
               This probably isn't what your app is going to look like.
             </Text>
+            <Button
+                onPress={() => {
+                  navigate("EventType");
+                }}
+                title="Event Types"
+                color="#ffffff"
+                accessibilityLabel="Log In To Team Mate"
+              />
         </View>
 
       </ScrollView>
