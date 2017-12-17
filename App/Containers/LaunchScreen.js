@@ -11,6 +11,9 @@ import styles from './Styles/LaunchScreenStyles'
 
 export default class LaunchScreen extends Component {
   render () {
+
+    const { navigate } = this.props.navigation;
+
     return (
       <View style={styles.mainContainer}>
         <Image source={Images.background} style={styles.backgroundImage} resizeMode='stretch' />
@@ -27,7 +30,7 @@ export default class LaunchScreen extends Component {
             <View style={styles.loginbutton} >
               <Button
                 onPress={() => {
-                  Alert.alert('Will Take you to Log In');
+                  navigate('ProfileScreen');
                 }}
                 title="Log In"
                 color="#ffffff"

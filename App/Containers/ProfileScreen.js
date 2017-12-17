@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
-import { ScrollView, Text, KeyboardAvoidingView } from 'react-native'
+import { ScrollView, Text, KeyboardAvoidingView, Image, View } from 'react-native'
 import { connect } from 'react-redux'
+import { Button } from 'react-native';
+import { Alert } from 'react-native';
+
+import { Images } from '../Themes'
 // Add Actions - replace 'Your' with whatever your reducer is called :)
 // import YourActions from '../Redux/YourRedux'
 
@@ -16,23 +20,29 @@ class ProfileScreen extends Component {
 
     return (
       <ScrollView style={styles.container}>
-        <KeyboardAvoidingView behavior='position'>
-          <Text>ProfileScreen</Text>
-        </KeyboardAvoidingView>
+        
+        <View style={styles.userInfo} >
+          <Text style={styles.userName}>
+          <Image source={Images.g20} style={styles.profileImage}/> USER NAME
+          </Text>
+        </View>
 
         <View style={styles.section} >
-            <Image source={Images.ready} />
-            <Text style={styles.sectionText}>
-              This probably isn't what your app is going to look like.
-            </Text>
-            <Button
-                onPress={() => {
-                  navigate("EventType");
-                }}
-                title="Event Types"
-                color="#ffffff"
-                accessibilityLabel="Log In To Team Mate"
-              />
+          <Text style={styles.title}>
+            FAVORITE ACTIVITIES
+          </Text>
+        </View>
+
+        <View style={styles.section} >
+          <Text style={styles.title}>
+            ACTIVITIES HOSTING
+          </Text>
+        </View>
+
+        <View style={styles.section} >
+          <Text style={styles.title}>
+            ACTIVITIES ATTENDING
+          </Text>
         </View>
 
       </ScrollView>
