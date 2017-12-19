@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { ScrollView, Text, Image, View } from 'react-native'
+import { ScrollView, KeyboardAvoidingView, Text, Image, View } from 'react-native'
 import DevscreensButton from '../../ignite/DevScreens/DevscreensButton.js'
 import { Button } from 'react-native';
 import { Alert } from 'react-native';
@@ -18,7 +18,9 @@ export default class LaunchScreen extends Component {
       <View style={styles.mainContainer}>
         <Image source={Images.background} style={styles.backgroundImage} resizeMode='stretch' />
         <ScrollView style={styles.container}>
-          <View style={styles.centered}>
+        <KeyboardAvoidingView behavior='position'>
+        
+        <View style={styles.centered}>
             <Image source={Images.launch} style={styles.logo} />
           </View>
 
@@ -55,7 +57,7 @@ export default class LaunchScreen extends Component {
           <View style={styles.centered}>
             <Image source={Images.g20} style={styles.g20logo} />
           </View>
-
+          </KeyboardAvoidingView>
         </ScrollView>
       </View>
     )
