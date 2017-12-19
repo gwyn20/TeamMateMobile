@@ -23,7 +23,25 @@ const images = {
   chevronRight: require('../Images/Icons/chevron-right.png'),
   hamburger: require('../Images/Icons/hamburger.png'),
   backButton: require('../Images/Icons/back-button.png'),
-  closeButton: require('../Images/Icons/close-button.png')
+  closeButton: require('../Images/Icons/close-button.png'),
+
+  badmintonIcon: require('../Images/EventIcons/badmintonIcon.png'),
+  baseballIcon: require('../Images/EventIcons/baseballIcon.png'),
+  basketballIcon: require('../Images/EventIcons/basketballIcon.png'),
+  bowlingIcon: require('../Images/EventIcons/bowlingIcon.png'),
+  cricketIcon: require('../Images/EventIcons/cricketIcon.png'),
+  footballIcon: require('../Images/EventIcons/footballIcon.png'),
+  frisbeeGolfIcon: require('../Images/EventIcons/frisbeeGolfIcon.png'),
+  golfIcon: require('../Images/EventIcons/golfIcon.png'),
+  iceHockeyIcon: require('../Images/EventIcons/iceHockeyIcon.png'),
+  lacrosseIcon: require('../Images/EventIcons/lacrosseIcon.png'),
+  poolIcon: require('../Images/EventIcons/poolIcon.png'),
+  soccerIcon: require('../Images/EventIcons/soccerIcon.png'),
+  softballIcon: require('../Images/EventIcons/softballIcon.png'),
+  tennisIcon: require('../Images/EventIcons/tennisIcon.png'),
+  ultimateFrisbeeIcon: require('../Images/EventIcons/ultimateFrisbeeIcon.png'),
+  volleyBallIcon: require('../Images/EventIcons/volleyBallIcon.png'),
+  otherIcon: require('../Images/EventIcons/otherIcon.png'),
 }
 
 export default images
