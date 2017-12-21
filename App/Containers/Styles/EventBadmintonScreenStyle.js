@@ -6,25 +6,40 @@ export default StyleSheet.create({
   container: {
     paddingBottom: Metrics.baseMargin
   },
+  logo: {
+    marginTop: Metrics.doubleSection,
+    height: Metrics.images.logo,
+    width: Metrics.images.logo,
+    resizeMode: 'contain'
+  },
   centered: {
     alignItems: 'center'
   },
-  userProfilePic: {
+  eventInfo: {
     marginTop: Metrics.doubleSection,
+    marginLeft: 30
+  },
+  eventImage: {
+    width: 100,
+    height: 100,
+  },
+  eventName: {
     alignItems: 'center',
-  },
-  profileImage: {
-    width: 150,
-    height: 150,
-  },
-  userInfo: {
-    paddingLeft: 5,
-    paddingBottom: 10,
-    fontSize: 20,
+    justifyContent:'center',
+    paddingBottom: 20,
+    fontSize: 30,
     fontWeight: 'bold',
     color: '#404956',
   },
-  location: {
+  createButton: {
+    marginBottom: 30,
+    width: 260,
+    flex:1,
+    alignItems: 'center',
+    justifyContent:'center',
+    backgroundColor: '#404956'
+  },
+  title: {
     flex:1,
     marginTop: Metrics.doubleSection,
     paddingLeft: 10,
@@ -35,14 +50,5 @@ export default StyleSheet.create({
     fontWeight: 'bold',
     color: '#ffffff',
     backgroundColor: '#404956'
-  },
-  editButton: {
-    marginBottom: 30,
-    width: 260,
-    flex:1,
-    alignItems: 'center',
-    justifyContent:'center',
-    backgroundColor: '#404956'
-  },
+  }
 })
-

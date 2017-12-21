@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { ScrollView, Text, KeyboardAvoidingView, Image, View } from 'react-native'
+import { ScrollView, Text, KeyboardAvoidingView, Image, View, TouchableHighlight, } from 'react-native'
 import { connect } from 'react-redux'
 import { Button } from 'react-native';
 import ResponsiveImage from 'react-native-responsive-image';
@@ -13,15 +13,24 @@ import styles from './Styles/EventTypesScreenStyle'
 
 class EventTypesScreen extends Component {
   render () {
+
+    const { navigate } = this.props.navigation;
+
     return (
       <View style={styles.mainContainer}>
       <Image source={Images.background} style={styles.backgroundImage} resizeMode='stretch' />
         <ScrollView style={styles.container}>
           <KeyboardAvoidingView behavior='position'>
             <View style={styles.eventIcon}>
+              <TouchableHighlight onPress={() => {navigate('EventBadmintonScreen')}}>
               <ResponsiveImage source={Images.badmintonIcon} initWidth="138" initHeight="138"/>
+              </TouchableHighlight>
+              <TouchableHighlight onPress={() => {navigate('EventBaseballScreen')}}>
               <ResponsiveImage source={Images.baseballIcon} initWidth="138" initHeight="138"/>
+              </TouchableHighlight>
+              <TouchableHighlight onPress={() => {navigate('EventBasketballScreen')}}>
               <ResponsiveImage source={Images.basketballIcon} initWidth="138" initHeight="138"/>
+              </TouchableHighlight>
             </View>
             <View style={styles.eventIcon}>
               <ResponsiveImage source={Images.bowlingIcon} initWidth="138" initHeight="138"/>

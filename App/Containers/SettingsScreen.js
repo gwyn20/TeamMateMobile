@@ -3,6 +3,7 @@ import { ScrollView, Text, KeyboardAvoidingView, Image, View } from 'react-nativ
 import { connect } from 'react-redux'
 import { Button } from 'react-native';
 
+
 import { Images } from '../Themes'
 // Add Actions - replace 'Your' with whatever your reducer is called :)
 // import YourActions from '../Redux/YourRedux'
@@ -12,6 +13,9 @@ import styles from './Styles/SettingsScreenStyle'
 
 class SettingsScreen extends Component {
   render () {
+
+    const { navigate } = this.props.navigation;
+
     return (
       <View style={styles.mainContainer}>
       <Image source={Images.background} style={styles.backgroundImage} resizeMode='stretch' />
@@ -38,7 +42,19 @@ class SettingsScreen extends Component {
             <Text style={styles.userInfo}>
               SEARCH RADIUS: 
             </Text>
+            <View style={styles.editButton} >
+              <Button
+                onPress={() => {
+                  navigate('ProfileScreen');
+                }}
+                title="Edit"
+                color="#ffffff"
+                accessibilityLabel="Edit Settings"
+              />
+            </View>
           </View>
+
+          
 
           </KeyboardAvoidingView>
         </ScrollView>
