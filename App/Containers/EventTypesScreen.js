@@ -22,7 +22,7 @@ class EventTypesScreen extends Component {
         <ScrollView style={styles.container}>
           <KeyboardAvoidingView behavior='position'>
             <View style={styles.eventIcon}>
-              <TouchableHighlight onPress={() => {navigate('EventBadmintonScreen')}}>
+              <TouchableHighlight onPress={() => {navigate('EventBadmintonScreen');}}>
               <ResponsiveImage source={Images.badmintonIcon} initWidth="138" initHeight="138"/>
               </TouchableHighlight>
               <TouchableHighlight onPress={() => {navigate('EventBaseballScreen')}}>
@@ -33,28 +33,56 @@ class EventTypesScreen extends Component {
               </TouchableHighlight>
             </View>
             <View style={styles.eventIcon}>
+              <TouchableHighlight onPress={() => {navigate('EventBowlingScreen')}}>
               <ResponsiveImage source={Images.bowlingIcon} initWidth="138" initHeight="138"/>
+              </TouchableHighlight>
+              <TouchableHighlight onPress={() => {navigate('EventCricketScreen')}}>
               <ResponsiveImage source={Images.cricketIcon} initWidth="138" initHeight="138"/>
+              </TouchableHighlight>
+              <TouchableHighlight onPress={() => {navigate('EventFootballScreen')}}>
               <ResponsiveImage source={Images.footballIcon} initWidth="138" initHeight="138"/>
+              </TouchableHighlight>
             </View>
             <View style={styles.eventIcon}>
+              <TouchableHighlight onPress={() => {navigate('EventFrisbeeGolfScreen')}}>
               <ResponsiveImage source={Images.frisbeeGolfIcon} initWidth="138" initHeight="138"/>
+              </TouchableHighlight>
+              <TouchableHighlight onPress={() => {navigate('EventGolfScreen')}}>
               <ResponsiveImage source={Images.golfIcon} initWidth="138" initHeight="138"/>
+              </TouchableHighlight>
+              <TouchableHighlight onPress={() => {navigate('EventIceHockeyScreen')}}>
               <ResponsiveImage source={Images.iceHockeyIcon} initWidth="138" initHeight="138"/>
+              </TouchableHighlight>
             </View>
             <View style={styles.eventIcon}>
+              <TouchableHighlight onPress={() => {navigate('EventLacrosseScreen')}}>
               <ResponsiveImage source={Images.lacrosseIcon} initWidth="138" initHeight="138"/>
+              </TouchableHighlight>
+              <TouchableHighlight onPress={() => {navigate('EventPoolScreen')}}>
               <ResponsiveImage source={Images.poolIcon} initWidth="138" initHeight="138"/>
+              </TouchableHighlight>
+              <TouchableHighlight onPress={() => {navigate('EventSoccerScreen')}}>
               <ResponsiveImage source={Images.soccerIcon} initWidth="138" initHeight="138"/>
+              </TouchableHighlight>
             </View>
             <View style={styles.eventIcon}>
+              <TouchableHighlight onPress={() => {navigate('EventSoftballScreen')}}>
               <ResponsiveImage source={Images.softballIcon} initWidth="138" initHeight="138"/>
+              </TouchableHighlight>
+              <TouchableHighlight onPress={() => {navigate('EventTennisScreen')}}>
               <ResponsiveImage source={Images.tennisIcon} initWidth="138" initHeight="138"/>
+              </TouchableHighlight>
+              <TouchableHighlight onPress={() => {navigate('EventUltimateFrisbeeScreen')}}>
               <ResponsiveImage source={Images.ultimateFrisbeeIcon} initWidth="138" initHeight="138"/>
+              </TouchableHighlight>
             </View>
             <View style={styles.eventIcon}>
+              <TouchableHighlight onPress={() => {navigate('EventVolleyBallScreen')}}>
               <ResponsiveImage source={Images.volleyBallIcon} initWidth="138" initHeight="138"/>
+              </TouchableHighlight>
+              <TouchableHighlight onPress={() => {navigate('EventOtherScreen')}}>
               <ResponsiveImage source={Images.otherIcon} initWidth="138" initHeight="138"/>
+              </TouchableHighlight>
             </View>
           </KeyboardAvoidingView>
         </ScrollView>
