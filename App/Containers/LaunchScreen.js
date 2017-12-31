@@ -10,7 +10,8 @@ import { Images } from '../Themes'
 import styles from './Styles/LaunchScreenStyles'
 
 export default class LaunchScreen extends Component {
-  render () {
+  
+    render () {
 
     const { navigate } = this.props.navigation;
 
@@ -32,7 +33,7 @@ export default class LaunchScreen extends Component {
             <View style={styles.loginbutton} >
               <Button
                 onPress={() => {
-                  navigate('ProfileScreen');
+                  navigate('LogInScreen');
                 }}
                 title="Log In"
                 color="#ffffff"
@@ -42,9 +43,9 @@ export default class LaunchScreen extends Component {
             <View style={styles.loginbutton} >  
               <Button
                 onPress={() => {
-                  Alert.alert('Will Take you to Create An Account');
+                  navigate('SignUpScreen');
                 }}
-                title="Create Account"
+                title="Sign Up"
                 color="#ffffff"
                 accessibilityLabel="Create An Account"
               />
