@@ -1,4 +1,5 @@
-import { StackNavigator, TabNavigator } from 'react-navigation'
+import React, { Component } from 'react'
+import { StackNavigator, TabNavigator, Image } from 'react-navigation'
 import SignUpScreen from '../Containers/SignUpScreen'
 import LogInScreen from '../Containers/LogInScreen'
 import CreateEventScreen from '../Containers/CreateEventScreen'
@@ -69,6 +70,8 @@ export const Tabs = TabNavigator({
     screen: ProfileScreen,
     
   },
+    
+  
   PLAY: {
     screen: EventTypesScreen,
 
