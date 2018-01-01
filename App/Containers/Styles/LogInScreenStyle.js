@@ -6,8 +6,14 @@ export default StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
-    //alignItems: 'center',
-    //justifyContent: 'center'
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'row'
+  },
+  form: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   logo: {
     marginTop: Metrics.doubleSection,
@@ -18,16 +24,6 @@ export default StyleSheet.create({
   centered: {
     alignItems: 'center',
     justifyContent: 'center'
-  },
-  loginbutton: {
-    marginTop: 30,
-    marginBottom: 30,
-    borderRadius: 5,
-    width: 260,
-    flex:1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: '#404956'
   }
 })
 

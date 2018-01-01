@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import { ScrollView, Text, KeyboardAvoidingView, Image, View, ActivityIndicator } from 'react-native'
 import { connect } from 'react-redux'
-import { Button } from 'react-native';
 import { Alert } from 'react-native';
 import * as firebase from 'firebase';
 import { Input } from '../Components/Input';
+import { Button } from '../Components/Button';
 
 import { Images } from '../Themes'
 // Add Actions - replace 'Your' with whatever your reducer is called :)
@@ -39,17 +39,19 @@ class LogInScreen extends Component {
   renderCurrentState() {
     if (this.state.authenticating) {
       return (
-        <View>
+        <View style={styles.form}>
           <ActivityIndicator size='large' />
         </View>
       )
     }
 
     return (
-      <View>
+      <View style={styles.form}>
         <Input 
           placeholder='Enter your email'
           label='Email'
+          keyboardType='email-address'
+          autoCapitalize='none'
           onChangeText={email => this.setState({ email })}
           value={this.state.email}
         />
@@ -60,17 +62,13 @@ class LogInScreen extends Component {
           onChangeText={password => this.setState({ password })}
           value={this.state.password}
         />
-        <View style={styles.centered}>  
-          <View style={styles.loginbutton} >
-            <Button
-              onPress={() => 
-              this.onPressSignIn() }
-              title="Log In"
-              color="#ffffff"
-              accessibilityLabel="Log In To Team Mate"
-            />
-          </View>
-        </View>
+        <Button
+          onPress={() => 
+          this.onPressSignIn() }
+          accessibilityLabel="Log In To Team Mate"
+        >
+        Log In
+        </Button>      
       </View>
 
     )
@@ -80,9 +78,13 @@ class LogInScreen extends Component {
     return (
       <View style={styles.mainContainer}>
       <Image source={Images.background} style={styles.backgroundImage} resizeMode='stretch' />
-        <ScrollView style={styles.container}>
+        <ScrollView>
+
+          <View style={styles.centered}>
+            <Image source={Images.launch} style={styles.logo} />
+          </View>
         
-          <View>
+          <View style={styles.container}>
             {this.renderCurrentState()}
           </View>     
 

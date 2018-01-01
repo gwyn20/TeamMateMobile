@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
 import { ScrollView, KeyboardAvoidingView, Text, Image, View } from 'react-native'
 import DevscreensButton from '../../ignite/DevScreens/DevscreensButton.js'
-import { Button } from 'react-native';
+import { Button } from '../Components/Button';
 import { Alert } from 'react-native';
 
 import { Images } from '../Themes'
 
 // Styles
 import styles from './Styles/LaunchScreenStyles'
+import { INITIAL_STATE } from '../Redux/SearchRedux';
 
 export default class LaunchScreen extends Component {
   
@@ -25,31 +26,27 @@ export default class LaunchScreen extends Component {
             <Image source={Images.launch} style={styles.logo} />
           </View>
 
-          <View style={styles.section} >
+          <View style={styles.centered} >
             <Image source={Images.ready} />
           </View>  
 
           <View style={styles.centered}>  
-            <View style={styles.loginbutton} >
-              <Button
-                onPress={() => {
-                  navigate('LogInScreen');
-                }}
-                title="Log In"
-                color="#ffffff"
-                accessibilityLabel="Log In To Team Mate"
-              />
-            </View>
-            <View style={styles.loginbutton} >  
-              <Button
-                onPress={() => {
-                  navigate('SignUpScreen');
-                }}
-                title="Sign Up"
-                color="#ffffff"
-                accessibilityLabel="Create An Account"
-              />
-            </View>
+            <Button
+              onPress={() => {
+                navigate('LogInScreen');
+              }}
+              accessibilityLabel="Log In To Team Mate"
+            >
+            Log In
+            </Button>
+            <Button
+              onPress={() => {
+                navigate('SignUpScreen');
+              }}
+              accessibilityLabel="Create An Account"
+            >
+            Sign Up
+            </Button>
           </View>
           
 
