@@ -7745,6 +7745,14 @@ react-native-gesture-handler@1.0.0-alpha.30:
   dependencies:
     prop-types "^15.5.10"
 
+react-native-icon-button@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/react-native-icon-button/-/react-native-icon-button-1.0.0.tgz#450a94bf8f6400bcbc31b2fa51366413cc2af1c4"
+
+react-native-img-button@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/react-native-img-button/-/react-native-img-button-1.0.1.tgz#766033b2c0125bc281d72e0bd0dd6cc05450fa11"
+
 react-native-iphone-x-helper@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/react-native-iphone-x-helper/-/react-native-iphone-x-helper-1.0.1.tgz#950dbdaca66f458689a7e9697c5beb9bd53f98f2"

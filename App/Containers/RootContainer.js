@@ -19,7 +19,7 @@ class RootContainer extends Component {
 
   getNavigtionTabs(){
     //flip to !true to show log in screen
-    if (!true){//add login logic to check to see if user logged in
+    if (true){//add login logic to check to see if user logged in
       return (<Tabs />);
     } 
     else
@@ -33,7 +33,7 @@ class RootContainer extends Component {
     return (
       <View style={styles.applicationView}>
         <StatusBar barStyle='light-content' />
-        <ReduxNavigation />
+        
         { this.getNavigtionTabs() }
       </View>
       

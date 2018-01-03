@@ -39,6 +39,8 @@
     "react": "16.0.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-23.0.0.tar.gz",
     "react-native-config": "^0.10.0",
+    "react-native-icon-button": "^1.0.0",
+    "react-native-img-button": "^1.0.1",
     "react-native-responsive-image": "^2.2.0",
     "react-native-tab-navigator": "^0.3.4",
     "react-navigation": "1.0.0-beta.11",

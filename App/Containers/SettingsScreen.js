@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { ScrollView, Text, KeyboardAvoidingView, Image, View } from 'react-native'
 import { connect } from 'react-redux'
-import { Button } from 'react-native';
+import { Button } from '../Components/Button';
 
 
 import { Images } from '../Themes'
@@ -42,16 +42,14 @@ class SettingsScreen extends Component {
             <Text style={styles.userInfo}>
               SEARCH RADIUS: 
             </Text>
-            <View style={styles.editButton} >
-              <Button
+            <Button
                 onPress={() => {
                   navigate('ProfileScreen');
                 }}
-                title="Edit"
-                color="#ffffff"
                 accessibilityLabel="Edit Settings"
-              />
-            </View>
+            >
+            Edit
+            </Button>
           </View>
 
           

@@ -35,14 +35,6 @@ export default StyleSheet.create({
     fontWeight: 'bold',
     color: '#ffffff',
     backgroundColor: '#404956'
-  },
-  editButton: {
-    marginBottom: 30,
-    width: 260,
-    flex:1,
-    alignItems: 'center',
-    justifyContent:'center',
-    backgroundColor: '#404956'
-  },
+  }
 })
 

@@ -17,6 +17,7 @@ class SignUpScreen extends Component {
   state = {
     email: '',
     password: '',
+    zipcode: '',
     authenticating: false,
   }
 
@@ -49,6 +50,8 @@ class SignUpScreen extends Component {
         <Input 
           placeholder='Enter your email'
           label='Email'
+          keyboardType='email-address'
+          autoCapitalize='none'
           onChangeText={email => this.setState({ email })}
           value={this.state.email}
         />
@@ -64,6 +67,13 @@ class SignUpScreen extends Component {
           label='Confirm Password'
           secureTextEntry
           onChangeText={password => this.setState({ password })}
+          value={this.state.password}
+        />
+        <Input 
+          placeholder='Enter your Zip Code'
+          label='Zip Code'
+          keyboardType='numeric'
+          onChangeText={password => this.setState({ zipcode })}
           value={this.state.password}
         />
         <Button

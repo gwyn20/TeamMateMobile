@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { ScrollView, Text, KeyboardAvoidingView, Image, View } from 'react-native'
 import { connect } from 'react-redux'
-import { Button } from 'react-native';
+import { Button } from '../Components/Button';
 import { Alert } from 'react-native';
 
 
@@ -15,6 +15,59 @@ import EventTypesScreen from './EventTypesScreen';
 
 class ProfileScreen extends Component {
   
+  state = {
+    FavoriteActivities: false,
+    ActivitiesHosting: false,
+    ActivitiesAttending: false,
+  }
+
+  onPressFavoriteActivities() {
+    this.setState({
+      FavoriteActivities: !this.state.FavoriteActivities,
+    });
+  }
+
+  onPressActivitiesHosting() {
+    this.setState({
+      ActivitiesHosting: !this.state.ActivitiesHosting,
+    });
+  }
+
+  onPressActivitiesAttending() {
+    this.setState({
+      ActivitiesAttending: !this.state.ActivitiesAttending,
+    });
+  }
+
+  renderFavoriteActivities() {
+    if (this.state.FavoriteActivities) {
+      return (
+        <View>
+          <Text>Favorite Activity Images</Text>
+        </View>
+      )
+    }
+  }
+
+  renderActivitiesHosting() {
+    if (this.state.ActivitiesHosting) {
+      return (
+        <View>
+          <Text>Activities Hosting List</Text>
+        </View>
+      )
+    }
+  }
+
+  renderActivitiesAttending() {
+    if (this.state.ActivitiesAttending) {
+      return (
+        <View>
+          <Text>Activities Attending List</Text>
+        </View>
+      )
+    }
+  }
 
   render () {
 
@@ -32,21 +85,42 @@ class ProfileScreen extends Component {
           </View>
 
           <View style={styles.section} >
-            <Text style={styles.title}>
-              FAVORITE ACTIVITIES
-            </Text>
-          </View>
+            <Button
+              onPress={() => 
+                this.onPressFavoriteActivities() }
+                accessibilityLabel="View Favorite Activities"
+            >
+              Favorite Activities
+            </Button>
+            
+            <View style={styles.container}>
+              {this.renderFavoriteActivities()}
+            </View> 
 
-          <View style={styles.section} >
-            <Text style={styles.title}>
-              ACTIVITIES HOSTING
-            </Text>
-          </View>
+            <Button
+              onPress={() => 
+                this.onPressActivitiesHosting() }
+                accessibilityLabel="View Activities Hosting"
+            >
+              Activities Hosting
+            </Button>
 
-          <View style={styles.section} >
-            <Text style={styles.title}>
-              ACTIVITIES ATTENDING
-            </Text>
+            <View style={styles.container}>
+              {this.renderActivitiesHosting()}
+            </View> 
+
+            <Button
+              onPress={() => 
+                this.onPressActivitiesAttending() }
+                accessibilityLabel="View Activities Attending"
+            >
+              Activities Attending
+            </Button>
+
+            <View style={styles.container}>
+              {this.renderActivitiesAttending()}
+            </View> 
+
           </View>
         
 

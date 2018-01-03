@@ -38,17 +38,5 @@ export default StyleSheet.create({
     fontSize: 30,
     fontWeight: 'bold',
     color: '#404956',
-  },
-  title: {
-    flex:1,
-    marginTop: Metrics.doubleSection,
-    paddingLeft: 10,
-    height: 30,
-    alignItems: 'center',
-    justifyContent:'center',
-    fontSize: 25,
-    fontWeight: 'bold',
-    color: '#ffffff',
-    backgroundColor: '#404956'
   }
 })

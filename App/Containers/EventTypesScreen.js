@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { ScrollView, Text, KeyboardAvoidingView, Image, View, TouchableHighlight, } from 'react-native'
 import { connect } from 'react-redux'
-import { Button } from 'react-native';
+
 import ResponsiveImage from 'react-native-responsive-image';
 
 import { Images } from '../Themes'
