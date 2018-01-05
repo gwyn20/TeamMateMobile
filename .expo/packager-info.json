@@ -1,8 +1,8 @@
 {
   "expoServerPort": 19000,
-  "packagerPort": 19002,
-  "packagerPid": 83077,
+  "packagerPort": 19001,
+  "packagerPid": 3065,
   "expoServerNgrokUrl": "https://v7-bib.gwyn20.teammatemobile.exp.direct",
   "packagerNgrokUrl": "https://packager.v7-bib.gwyn20.teammatemobile.exp.direct",
-  "ngrokPid": 83089
+  "ngrokPid": 3080
 }

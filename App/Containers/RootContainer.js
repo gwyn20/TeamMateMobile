@@ -33,7 +33,7 @@ class RootContainer extends Component {
     return (
       <View style={styles.applicationView}>
         <StatusBar barStyle='light-content' />
-        
+  
         { this.getNavigtionTabs() }
       </View>
       
