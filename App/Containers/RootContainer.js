@@ -9,6 +9,21 @@ import ReduxPersist from '../Config/ReduxPersist'
 // Styles
 import styles from './Styles/RootContainerStyles'
 
+// Firebase Database
+import * as firebase from 'firebase'
+
+// Initialize Firebase
+const firebaseConfig = {
+    apiKey: "AIzaSyBmNTu1uQ3ewnkv-ZWSNe6Vekha6PNdh0A",
+    authDomain: "teammate-fe155.firebaseapp.com",
+    databaseURL: "https://teammate-fe155.firebaseio.com",
+    projectId: "teammate-fe155",
+    storageBucket: "teammate-fe155.appspot.com",
+    messagingSenderId: "496122293207"
+}
+
+const firebaseApp = firebase.initializeApp(firebaseConfig);
+
 class RootContainer extends Component {
   componentDidMount () {
     // if redux persist is not active fire startup action
@@ -32,8 +47,10 @@ class RootContainer extends Component {
     // <ReduxNavigation />
     return (
       <View style={styles.applicationView}>
-        <StatusBar barStyle='light-content' />
-        
+        <StatusBar 
+          barStyle='light-content'
+          backgroundColor='#404956' />
+        <ReduxNavigation />
         { this.getNavigtionTabs() }
       </View>
       
