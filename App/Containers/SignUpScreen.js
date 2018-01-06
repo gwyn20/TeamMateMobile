@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { ScrollView, Text, KeyboardAvoidingView, Image, View, ActivityIndicator } from 'react-native'
 import { connect } from 'react-redux'
 import { Alert } from 'react-native';
-import * as firebase from 'firebase';
 import { Input } from '../Components/Input';
 import { Button } from '../Components/Button';
 
@@ -21,14 +20,7 @@ class SignUpScreen extends Component {
     authenticating: false,
   }
 
-  componentWillMount() {
-    const firebaseConfig = {
-      apiKey: 'AIzaSyBmNTu1uQ3ewnkv-ZWSNe6Vekha6PNdh0A',
-      authDomain: 'teammate-fe155.firebaseapp.com',
-    }
-
-    firebase.initializeApp(firebaseConfig);
-  }
+  
 
   onPressSignIn() {
     this.setState({

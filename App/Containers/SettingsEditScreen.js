@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { ScrollView, Text, KeyboardAvoidingView, Image, View } from 'react-native'
 import { connect } from 'react-redux'
+import { Input } from '../Components/Input';
 import { Button } from '../Components/Button';
 
 
@@ -9,20 +10,28 @@ import { Images } from '../Themes'
 // import YourActions from '../Redux/YourRedux'
 
 // Styles
-import styles from './Styles/SettingsScreenStyle'
+import styles from './Styles/SettingsEditScreenStyle'
 
-class SettingsScreen extends Component {
+class SettingsEditScreen extends Component {
+
+  state = {
+    username: '',
+    email: '',
+    password: '',
+    zipcode: '',
+    searchRadius: '',
+  }
+
   render () {
 
     const { navigate } = this.props.navigation;
-
+    
     return (
       <View style={styles.mainContainer}>
       <Image source={Images.background} style={styles.backgroundImage} resizeMode='stretch' />
         <ScrollView style={styles.container}>
           <KeyboardAvoidingView behavior='position'>
           
-
           <View style={styles.section} >
             <Text style={styles.userInfo}>
               USER NAME: User 123
@@ -41,7 +50,7 @@ class SettingsScreen extends Component {
             </Text>
             <Button
                 onPress={() => {
-                  navigate('SettingsEditScreen');
+                  navigate('ProfileScreen');
                 }}
                 accessibilityLabel="Edit Settings"
             >
@@ -68,4 +77,4 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(SettingsScreen)
+export default connect(mapStateToProps, mapDispatchToProps)(SettingsEditScreen)

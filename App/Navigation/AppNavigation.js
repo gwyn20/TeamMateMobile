@@ -1,4 +1,5 @@
 import { StackNavigator, TabNavigator } from 'react-navigation'
+import SettingsEditScreen from '../Containers/SettingsEditScreen'
 import SignUpScreen from '../Containers/SignUpScreen'
 import LogInScreen from '../Containers/LogInScreen'
 import CreateEventScreen from '../Containers/CreateEventScreen'
@@ -29,6 +30,7 @@ import styles from './Styles/NavigationStyles'
 
 // Manifest of possible screens
 const PrimaryNav = StackNavigator({
+  SettingsEditScreen: { screen: SettingsEditScreen },
   SignUpScreen: { screen: SignUpScreen },
   LogInScreen: { screen: LogInScreen },
   CreateEventScreen: { screen: CreateEventScreen },
