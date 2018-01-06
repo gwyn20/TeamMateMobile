@@ -62,7 +62,7 @@ const PrimaryNav = StackNavigator({
   }
 })
 
-export default PrimaryNav
+export default PrimaryNav;
 
 export const Tabs = TabNavigator({
   PROFILE: {
@@ -77,3 +77,5 @@ export const Tabs = TabNavigator({
     screen: SettingsScreen,
   },
 })
+
+
